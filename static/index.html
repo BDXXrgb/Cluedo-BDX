@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BDX Cluedo en Ligne</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="auth">
+    <div class="panel">
+      <h2>Compte</h2>
+      <input id="username" placeholder="Nom d'utilisateur" />
+      <input id="password" type="password" placeholder="Mot de passe" />
+      <div class="row">
+        <button id="register">Créer compte</button>
+        <button id="login">Connexion</button>
+      </div>
+      <p id="authstatus">Non connecté</p>
+    </div>
+  </div>
+
+  <div class="app">
+    <header>
+      <h1>BDX Cluedo en Ligne</h1>
+      <p>Manoir victorien • Multijoueur en ligne</p>
+    </header>
+
+    <section class="panel controls">
+      <input id="name" placeholder="Ton pseudo in-game" />
+      <select id="character">
+        <option>Miss Scarlet</option>
+        <option>Colonel Mustard</option>
+        <option>Mrs. White</option>
+        <option>Mr. Green</option>
+        <option>Mrs. Peacock</option>
+        <option>Professor Plum</option>
+      </select>
+      <button id="connect">Se connecter au jeu</button>
+      <button id="start">Lancer la partie</button>
+      <button id="roll">Lancer dé</button>
+      <button id="secret">Passage secret</button>
+    </section>
+
+    <main class="grid">
+      <section class="panel board-panel">
+        <h2>Plateau</h2>
+        <div id="board" class="board"></div>
+      </section>
+
+      <section class="panel">
+        <h2>État</h2>
+        <pre id="state">En attente...</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Chat</h2>
+        <div id="chat" class="chatbox"></div>
+        <div class="row">
+          <input id="msg" placeholder="Message" />
+          <button id="send">Envoyer</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Action</h2>
+        <input id="room" placeholder="Pièce" />
+        <input id="suspect" placeholder="Suspect" />
+        <input id="weapon" placeholder="Arme" />
+        <div class="row">
+          <button id="move">Déplacer vers X/Y ci-dessous</button>
+          <button id="suggest">Suggérer</button>
+          <button id="accuse">Accuser</button>
+          <button id="endturn">Fin de tour</button>
+        </div>
+        <div class="row">
+          <input id="x" type="number" placeholder="X" />
+          <input id="y" type="number" placeholder="Y" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Classement / historique</h2>
+        <div id="leaderboard"></div>
+        <div id="matches"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
